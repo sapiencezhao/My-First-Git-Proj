@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+<script language = "javascript">
+	var xmlHttp;
+	function createXMLHttp(){
+		if(window.XMLHttpRequest){
+			xmlHttp = new XMLHttpRequest();
+		}else{
+			xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+	}
+	function showMsg(){
+		createXMLHttp();
+		xmlHttp.open("POST","content.html");
+		xmlHttp.onreadystatechange = showMsgCallback;
+		xmlHttp.send(null);
+	}
+	function showMsgCallback(){
+		createXMLHttp();
+		if(xmlHttp.readyState == 4){
+			if(xmlHttp.state == 200){
+				var text = xmlHttp.responseText;
+				document.getElementById("msg").className()="样式表名称";
+				document.getElementById("msg").innerHTML=text;
+			}
+		}
+	}
+</script>
+<input type = "button" onclick="showMsg()" value="调用Ajax中内容">
+<span id = "msg"></span>
+</body>
+</html>

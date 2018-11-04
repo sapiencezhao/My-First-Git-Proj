@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd" >
+<taglib>
+  <tlib-version>1.0</tlib-version>
+  <jsp-version>1.0</jsp-version>
+  <short-name>mldntag</short-name>
+  <tag>
+  	<name>present</name>
+  	<tag-class>org.tagdemo.IterateTag</tag-class>
+    <body-content>JSP</body-content>
+    <attribute>
+    		<name>name</name>
+    		<required>true</required>
+    		<rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+    		<name>scope</name>
+    		<required>true</required>
+    		<rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <name>iterate</name>
+    <tag-class>org.tagdemo.IterateTag</tag-class>
+    <tei-class>org.tagdemo.IterateTagExtraInfo</tei-class>
+    <body-content>JSP</body-content>
+    <attribute>
+    		<name>id</name>
+    		<required>true</required>
+    		<rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+    		<name>name</name>
+    		<required>true</required>
+    		<rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+    		<name>scope</name>
+    		<required>true</required>
+    		<rtexprvalue>true</rtexprvalue>
+    </attribute>
+    
+  </tag>
+</taglib>
